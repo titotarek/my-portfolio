@@ -1,0 +1,25 @@
+.container .animate-slide {
+	line-height: 1.5;
+	text-align: center;
+	padding-top: 146px;
+	font-size: 24px;
+	font-weight: bold;
+	margin-bottom: 10px;
+	font-size: 20px;
+	background: linear-gradient(to right, rgb(220, 219, 219) 20%, gray 50%);
+	background-clip: text;
+	color: transparent;
+	letter-spacing: 2px;
+	text-transform: capitalize;
+}
+
+.animate-slide {
+	opacity: 0;
+	transform: translateX(-50%);
+	transition: all 1.5s ease-in-out;
+}
+
+.animate-slide.animate {
+	opacity: 1;
+	transform: translateY(0);
+}

@@ -1,0 +1,158 @@
+.contact-us {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	padding: 50px;
+	margin: 100px 0;
+}
+.contact-us::before {
+	content: "";
+	position: absolute;
+	bottom: 0px;
+	right: 0;
+	left: 0;
+	width: 100%;
+	height: 1px;
+	background-color: rgb(47, 45, 45);
+}
+.contact-us h2 {
+	background: linear-gradient(to right, white 30%, gray 50%);
+	background-clip: text;
+	color: transparent;
+}
+
+button {
+	margin: 60px 0;
+	position: relative;
+	background-color: #161616;
+	border: 1px solid rgb(62, 57, 57);
+	cursor: pointer;
+	padding: 10px 20px;
+	border-radius: 5px;
+	display: flex;
+	align-items: center;
+	transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+	overflow: hidden;
+	font-family: "Open Sans", sans-serif;
+	color: #ccc;
+}
+
+button:hover {
+	transform: translateY(-5px);
+}
+
+button img {
+	width: 30px;
+	height: 30px;
+	margin-right: 10px;
+	filter: invert(50%) sepia(0%) saturate(1257%) hue-rotate(149deg)
+		brightness(101%) contrast(83%);
+}
+
+button span {
+	padding-right: 10px;
+	font-size: 16px;
+	color: #9a9a9a;
+	/* font-weight: bold; */
+}
+
+button:hover .button-overlay {
+	transform: translateX(100%);
+}
+
+.button-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #007bff;
+	transition: transform 0.3s ease-in-out;
+	z-index: -1;
+}
+
+button:hover .button-overlay {
+	transform: translateX(0);
+	z-index: 1;
+}
+
+.slide-from-left {
+	opacity: 0;
+	transform: translateX(-50px);
+	transition: all 4s ease-in-out;
+	-webkit-transition: all 4s ease-in-out;
+	-moz-transition: all 4s ease-in-out;
+	-ms-transition: all 4s ease-in-out;
+	-o-transition: all 4s ease-in-out;
+}
+
+.slide-from-left-animation {
+	opacity: 1;
+	transform: translateX(0);
+}
+
+@media screen and (max-width: 767px) {
+	/* Styles for phones */
+	.contact-us {
+		padding: 30px;
+	}
+
+	button {
+		font-size: 14px;
+		padding: 8px 16px;
+	}
+
+	button img {
+		width: 20px;
+		height: 20px;
+	}
+
+	button span {
+		font-size: 14px;
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+	/* Styles for tablets */
+	.contact-us {
+		padding: 40px;
+	}
+
+	button {
+		font-size: 16px;
+		padding: 10px 20px;
+	}
+
+	button img {
+		width: 25px;
+		height: 25px;
+	}
+
+	button span {
+		font-size: 16px;
+	}
+}
+
+@media screen and (min-width: 992px) {
+	/* Styles for desktops */
+	.contact-us {
+		padding: 140px 0px 50px 0px;
+	}
+
+	button {
+		font-size: 18px;
+		padding: 12px 24px;
+	}
+
+	button img {
+		width: 20px;
+		height: 20px;
+	}
+
+	button span {
+		font-size: 16px;
+	}
+}

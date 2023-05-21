@@ -1,0 +1,164 @@
+header {
+	display: flex;
+	position: relative;
+	align-items: center;
+	padding: 1rem;
+}
+
+header::after {
+	content: "";
+	position: absolute;
+	bottom: 0px;
+	left: 0;
+	width: 100%;
+	height: 1px;
+	background-color: rgb(47, 45, 45);
+}
+
+.logo img {
+	height: 50px;
+    filter: invert(67%) sepia(6%) saturate(10%) hue-rotate(8deg) brightness(89%)
+    contrast(85%);
+}
+
+nav {
+	padding-left: 50px;
+}
+
+nav .nav-links {
+	display: flex;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+nav .nav-links .active {
+	color: white;
+}
+
+
+nav li {
+	margin-left: 1.5rem;
+}
+
+nav li:first-child {
+	margin-left: 0;
+}
+
+nav a {
+	color: #808080;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 1rem;
+
+}
+
+
+@media screen and (max-width: 768px) {
+	header {
+		flex-direction: row;
+		justify-content: space-between;
+		height: 70px;
+	}
+
+	.logo img {
+		height: 40px;
+	}
+
+	nav {
+		padding-left: 0px;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.nav-links {
+		position: fixed;
+		top: 70px;
+		left: 0;
+		background-color: #161616;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+		height: calc(100vh - 70px);
+		transform: translateX(-100%);
+		transition: transform 0.3s ease-in-out;
+		z-index: -1;
+	}
+    .nav-links li > a{
+        background: transparent;
+    }
+
+	.nav-links li {
+		margin: 1rem 0;
+	}
+
+	.nav-active {
+		transform: translateX(0);
+		z-index: 1;
+		height: 100%;
+		top: 100px;
+		bottom: 0;
+	}
+
+	.burger {
+		display: block;
+		cursor: pointer;
+	}
+
+	.line1,
+	.line2,
+	.line3 {
+		width: 25px;
+		height: 3px;
+		background-color: white;
+		margin: 5px;
+		transition: all 0.3s ease-in-out;
+	}
+
+	.line2 {
+		width: 20px;
+	}
+
+	.nav-active .line1 {
+		transform: rotate(-45deg) translate(-5px, 6px);
+	}
+
+	.nav-active .line2 {
+		opacity: 0;
+	}
+
+	.nav-active .line3 {
+		transform: rotate(45deg) translate(-5px, -6px);
+	}
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+	.container {
+		max-width: 90%;
+		padding: 0 20px;
+	}
+
+	.logo img {
+		height: 50px;
+	}
+
+	nav .nav-links {
+		position: static;
+		background-color: transparent;
+		width: auto;
+		height: auto;
+		transform: none;
+	}
+
+	nav li:first-child {
+		margin-left: 0;
+	}
+
+	nav li:last-child {
+		margin-right: 0;
+	}
+
+	.burger {
+		display: none;
+	}
+}

@@ -1,0 +1,118 @@
+.custom-container {
+	margin-top: 2rem;
+}
+
+.custom-heading {
+	font-size: 2rem;
+	text-align: center;
+	margin-bottom: 2rem;
+}
+
+.custom-card-container {
+	padding-top: 70px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 3rem;
+	padding-bottom: 100px;
+}
+
+.custom-card {
+	color: gray;
+	border: 1px solid gray;
+	box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+	border-radius: 0.5rem;
+	overflow: hidden;
+	width: 40rem;
+	padding: 20px 0px 40px 0px;
+	transition: all 500ms linear;
+	transition: opacity 0.5s, transform 0.5s;
+	transform: translateY(60px);
+	/* margin-top: 80px; */
+}
+
+.custom-card img {
+	width: 100px;
+	height: 100px;
+	filter: invert(67%) sepia(6%) saturate(10%) hue-rotate(8deg) brightness(89%)
+		contrast(85%);
+}
+
+.slide-in {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.custom-card:hover {
+	box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.15);
+	transform: translateY(-0.25rem);
+}
+
+.custom-card__body {
+	padding: 1.5rem;
+	background: linear-gradient(to right, rgb(242, 240, 240) 30%, gray 70%);
+	background-clip: text;
+	color: transparent;
+}
+
+.custom-heading {
+	text-align: center;
+	padding: 100px 0px 0px 0px;
+	background: linear-gradient(to right, rgb(242, 240, 240) 30%, gray 70%);
+	background-clip: text;
+	color: transparent;
+	letter-spacing: 3px;
+}
+
+.custom-card__body h3 {
+	margin-bottom: 1rem;
+	text-transform: capitalize;
+	font-size: 2.2rem;
+}
+
+.custom-card__body p {
+	font-size: 1.8rem;
+	margin-bottom: 1rem;
+}
+
+.custom-card__body a {
+	display: inline-block;
+	margin-top: 10px;
+	border: 1px solid gray;
+	padding-left: 10px;
+	padding: 0.5rem 1rem;
+	color: #fff;
+	font-size: 1.3rem;
+	text-decoration: none;
+	border-radius: 0.25rem;
+	transition: all 0.3s ease-in-out;
+}
+
+.custom-card__body a:nth-child(0) {
+	padding-left: 10px;
+}
+
+.custom-card__body a:hover {
+	background-color: #3e8e41;
+}
+
+@media screen and (max-width: 768px) {
+	.custom-heading {
+		padding: 20px 0px 0px 0px;
+	}
+	.custom-card-container {
+		padding-top: 20px;
+	}
+
+	.custom-card__body h3 {
+		font-size: 1.5rem;
+	}
+
+	.custom-card__body p {
+		font-size: 1.4rem;
+	}
+
+	.custom-card__body a {
+		font-size: 1.2rem;
+	}
+}
