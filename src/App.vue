@@ -23,3 +23,4 @@ export default {
 @import "./assets/styles/footer.css";
 @import "./assets/styles/about.css";
 </style>
+
