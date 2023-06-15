@@ -40,6 +40,12 @@ export default {
 		return {
 			cards: [
 				{
+					title: "Siemens and Bosch Store",
+					description:
+						"Build an e-commerce platform for a physical store specializing in household equipment from Siemens and Bosch. This project emphasizes front-end functionalities, with no authentication or backend implementation required. API calls will be simulated, and key features include Product Overview, Filter, Details, User Registration, Password Security, and Input Validation.",
+					linkHref: "https://mystore-b1wa.onrender.com/",
+				},
+				{
 					title: "tanaruz boats",
 					description:
 						"This project showcases the development of a 3D-printed customizable boat constructed from reusable polymers.",
